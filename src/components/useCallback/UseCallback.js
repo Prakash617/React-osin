@@ -4,7 +4,7 @@ import Todos from './Todos';
 const UseCallback = () => {
     const [count, setCount] = useState(0);
   const [todos, setTodos] = useState([]);
-
+  console.log('first')
   const increment = () => {
     setCount((c) => c + 1);
   };

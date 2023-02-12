@@ -7,7 +7,7 @@ const useFetch = (url) => {
     useEffect(() => {
             fetch(`${ROOT_URL}/${url}`)
           .then((res) => res.json())
-          .then((data) => setData(data));
+          .then((d) => setData(d));
       }, [url]);
       return [data];
 

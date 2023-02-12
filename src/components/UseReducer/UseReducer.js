@@ -11,6 +11,11 @@ const initialTodos = [
       title: "Todo 2",
       complete: false,
     },
+    {
+      id: 3,
+      title: "Todo 3",
+      complete: true,
+    },
   ];
   const reducer = (state, action) => {
     switch (action.type) {
@@ -22,6 +27,9 @@ const initialTodos = [
             return todo;
           }
         });
+      
+      // case "inc":
+      //   console.log('first')
       default:
         return state;
     }

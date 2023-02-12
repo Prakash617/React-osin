@@ -10,6 +10,7 @@ import UseCallback from "./useCallback/UseCallback";
 import Nmemo from "./useMemo/Nmemo";
 import UMemo from "./useMemo/UMemo";
 import Chooks from "./CustomHooks/Chooks";
+import UseCallback1 from "./useCallback/useCallback1/UseCallback1";
 
 export const UserContext = createContext();
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
         {/* <UseRef3/> */}
         {/* <UseReducer/> */}
         {/* <UseCallback/> */}
+        {/* <UseCallback1/> */}
         {/* <Nmemo/> */}
         {/* <UMemo/> */}
         <Chooks/>

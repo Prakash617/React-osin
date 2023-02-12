@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 const UseRef = () => {
     const [inputValue, setInputValue] = useState("");
+    console.log('first')
     const count = useRef(0);
     useEffect(() => {
         count.current = count.current + 1;
