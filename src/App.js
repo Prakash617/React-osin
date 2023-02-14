@@ -5,9 +5,14 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import Contact from './components/Contact';
 import NoPage from './components/NoPage';
+import {incNumber} from "./actions";
+import {decNumber} from "./actions";
+import { useSelector, useDispatch } from "react-redux";
 
 
 function App() {
+  const changeTheNumber = useSelector(state => state.changeTheNumber);
+  const dispatch = useDispatch();
   return (
    <>
   <BrowserRouter>
@@ -24,7 +29,22 @@ function App() {
        
       </Routes>
     </BrowserRouter>
+    <div className="main-div">
+    
 
+    <div className="container">
+
+    <h1>Increment/Decrement counter</h1>
+    <h4>using React and Redux</h4>
+    
+    <div className="quantity">
+      <a className="quantity__minus" title="Decrement" onClick={() => dispatch(decNumber())}><span>-</span></a>
+      <input name="quantity" type="text" className="quantity__input" value={changeTheNumber} />
+      <a className="quantity__plus" title="Increment" onClick={() => dispatch(incNumber(5))}><span>+</span></a>
+    </div>
+
+        </div>
+      </div>
    </>
   );
 }
